@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Isaih Porter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Titillium+Web" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="contactMe">
+            <a href="mailto:isaih.porter@gmail.com"><img src="images/Chat_Blue.png" alt="chat logo">Contact Me</a>
+        </div>
+        <div class="navIcons">
+            <a href="https://www.linkedin.com/in/isaih/" target="_blank"><img src="images/LinkedIn-Gray.jpg" alt="linkedin logo" style="height: 25px; width: 25px; opacity: .75"></a>
+            <a href="https://www.instagram.com/i_saih/?hl=en" target="_blank"><img src="images/insta_grey.png" alt="instagram logo"></a>
+        </div>
+    </div>
+    
+    <button type="button" class="collapsible" id="resume" data-toggle="collapse" data-target="#resumepdf">View Resume</button>
+        <object class="collapse" id="resumepdf" width="100%" height="700" frameborder="0" allowfullscreen data="/Resume.pdf" type="application/pdf">
+            <iframe src="https://docs.google.com/viewer?/Resume.pdf&embedded=true"></iframe>
+        </object>
+    <div class="landing">
+        <div class="landingWrapper">
+            <div class="landingL">
+                <h1 class="name">Isaih Porter...</h1>
+                <p class="tagline">Hello. I am Isaih Porter, <br> a creative producer with <br><span class="blue">unique talents.</span></p>
+                <ul class="talents">
+                    <li><p>Web Development</p></li>
+                    <li><p>Industrial Design</p></li>
+                    <li><p>Game Design</p></li>
+                    <li><p>Ceramics</p></li>
+                </ul>
+            </div>
+            <div class="landingR">
+                <img src="images/Full_image.png" alt="Isaih Porter pic" width="260px" height="410" class="blueborder">
+            </div>
+        </div>
+        <a href="#keep-reading"><h1 class="scroll">v</h1></a>
+    </div>
+    
+    <div class="skills" id="keep-reading">
+        <h2>Skills</h2>
+        <p>These are some of the technologies that I use to create:</p>
+        <div class="programs">
+            <img src="images/unity.png" alt="unity icon">
+            <img src="images/cs.png" alt="cs icon">
+            <img src="images/arduino.png" alt="arduino icon">
+            <img src="images/py.png" alt="py icon">
+            <img src="images/Ps.png" alt="Ps icon">
+            <img src="images/js.png" alt="js icon">
+            <img src="images/html.png" alt="html icon">
+            <img src="images/css.jpg" alt="css icon">
+        </div>
+    </div>    
+    
+    
+    <div class="work2 clearfix">
+        <div class="workText">
+            <h1>GPGPU<br>Flocking<br>Simulation</h1>
+            <div class="underline"></div>
+        </div>
+        <img src="images/Project_04.png" alt="project image" class="workImg blueborder">
+    </div>
+        <button type="button" class="collapsible" data-toggle="collapse" data-target="#project4">View Project</button>
+        <div class="collapse" id="project4">
+            <p>This research examines the increased performance of large-scale particle simulation on the Graphics Processing Unit (GPU) against conventional implementation on the CPU. In first semester, my partner and I developed a particle simulation program using a Compute Shader on the GPU to calculate particle motion with a 3D Simplex noise algorithm. The current implementation shows around 60 frames per second (FPS) in 4K resolution for about 8 million particles of a point primitive type as well as a quad sprite model. The performance gain over the equivalent version on the CPU is about a 200x speedup in frame rate. Both the CPU and GPU versions of the program were created using C# and HLSL with Unity and DirectX. We deployed this program for the art installation of The Posture Portrait Project at Connecticut College to achieve an image-dissolving visual effect where each particle is generated from image pixels (video coming soon). We have also implemented a boids flocking algorithm using the GPU using C# and HLSL (video below). This particle motion requires significantly more computation than Perlin noise as each particle will need to be aware of each other particle’s location. We ended up with three versions of boids flocking with differing levels of CPU/GPU involvement-- one version where boids were rendered as GameObjects, as sprites, and as polygons. The GPU used for testing both particle systems was an Nvidia Geforce GTX 1080 and the CPU an Intel Core i7-6700k @ 4GHz.</p>
+            <iframe class="utube" width="80%" height="315" src="https://www.youtube.com/embed/Tpmtqf_QQ4Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    
+    <div class="work clearfix">
+        <div class="workText">
+            <h1>Dungeon<br>Dash</h1>
+            <div class="underline"></div>
+        </div>
+        <img src="images/Project_02.png" alt="project image" class="workImg blueborder">
+    </div>
+    <button type="button" class="collapsible" data-toggle="collapse" data-target="#project2">View Project</button>
+    <div class="collapse" id="project2">
+        <p>With the help of two peers, I created a dungeon-crawler, multiplayer, racing game. Using Unity to develop the game, I was in charge of a large amount of the shaders and scripts. All of the graphics were created by one of my team members.<br>  You can view some clips of gameplay and a quick how to video below:</p>
+        <iframe class="utube" width="80%" height="315" src="https://www.youtube.com/embed/eFDJnIWwi_8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="utube" width="80%" height="315" src="https://www.youtube.com/embed/LshIi8A-ttg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    
+    <div class="work2 clearfix">
+        <div class="workText">
+            <h1>Spinning<br>Earth</h1>
+            <div class="underline"></div>
+        </div>
+        <img src="images/Project_03.jpg" alt="project image" class="workImg blueborder">
+    </div>
+    <button type="button" class="collapsible" data-toggle="collapse" data-target="#project3">View Project</button>
+    <div class="collapse" id="project3">
+        <p>I have created a tool that will help me explore a paradox I have found at the intersection of nature, art, and technology. I have always connected with clay as a material because of its ability to maintain its memory and reflect its surroundings. My main tool while molding clay is the pottery wheel. The pottery wheel has been criticized for being too mechanical and some claim it limits creativity; however, Spinning Earth uses an Arduino Uno microcontroller to manipulate the speed and direction based magnitudes and deathtolls of past major earthquakes. I am hoping to reveal the paradox where using more-advanced computers leads to more-organic artwork.
+        <br>You can view me throwing 3 cups on the Spinning Earth wheel below.
+        </p>
+        <iframe class="utube" width="80%" height="315" src="https://www.youtube.com/embed/8-w6pbhbaso?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    
+    <div class="work clearfix">
+        <div class="workText">
+            <h1>Ceramics</h1>
+            <div class="underline"></div>
+        </div>
+        <img src="images/Project_01.jpg" alt="project image" class="workImg blueborder">
+    </div>    
+    <button type="button" class="collapsible" data-toggle="collapse" data-target="#gallery">View Gallery</button>
+    <div class="collapse" id="gallery">
+        <p>The photographs of my work below were taken by the talented 
+            <a target="_blank" rel="noopener noreferrer" href="http://jackbeal.org/">Jack Beal</a>
+            who wrote an incredible article regarding this shoot and the interaction between body and object. 
+            <br>You can read it all
+        <a target="_blank" rel="noopener noreferrer" href="http://blog.jackbeal.org/2018/05/terraforming/">here</a>.
+        </p>
+        <div class="gallery-box">
+            <div><img src="images/Isaih/001-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/003--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/005--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/006-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/007-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/008--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/010--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/031--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/012--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/013--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/014--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/015--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/017--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/019--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/022--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/024--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/027--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/028--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/029-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/032-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/033-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/035-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/036-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/037-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/038-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/041-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/043-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/045-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/047-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/048--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/049--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/050-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/052-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/053-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/054-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/055-Isaih_pots-20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+            <div><img src="images/Isaih/056--20180516-New_London_Connecticut-JACK_BEAL.jpg"></div>
+    </div>
+    </div>
+
+    <footer>
+        <h5>Created by: Isaih Porter</h5>
+        <div class="underline"></div>
+    </footer>
+
+    
+</body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

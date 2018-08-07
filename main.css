@@ -1,0 +1,423 @@
+/*-------- Global --------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+body, html, .main {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 100;
+}
+
+section {
+    min-height: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.blue {
+    color: #027BFF;
+}
+
+body {
+    width: 60%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #17191A;
+}
+h2 {
+    font-size: 35px;
+    font-weight: 400;
+    color: #17191A;
+}
+h5 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #17191A;
+}
+
+p {
+    color: #8F9EA5;
+    font-weight: 100;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+@keyframes type {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 13ch;
+    }
+}
+
+@keyframes down {
+    0% {
+        height: 0ch;
+    }
+    100% {
+        height: 2ch;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.name {
+    animation: type 3s steps(14);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    width: 14ch;
+    font-family: monospace;
+}
+
+.blueborder {
+    border: 2px solid #027BFF;
+}
+
+/*-------- Nav --------*/
+.nav {
+    display: flex;
+    align-items: center;
+    height: 5em;
+}
+
+.tagline {
+    animation: fadeIn 4s;
+}
+
+.contactMe, .navIcons {
+    flex: 1;
+    font-size: 12px;
+    color: #8F9EA5;
+}
+
+.navIcons {
+    text-align: right;
+}
+
+.navIcons a, .contactMe a, .contactMe img {
+    display: inline-block;
+    vertical-align: middle;
+    animation: fadeIn 2s;
+}
+
+.navIcons a {
+    margin-left: 40px;
+}
+
+.contactMe a {
+    color: #027BFF;
+    text-decoration: none;
+}
+
+.contactMe img {
+    margin-right: 0px;
+}
+
+
+
+/*-------- Landing --------*/
+.landing {
+    height: 100vh;
+    position: relative;
+}
+.landingWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.landingL {
+    margin-top: 1.5em;
+}
+
+.scroll {
+    position:absolute;
+    bottom: 4em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-weight: 100;
+    animation: pulse 1.75s;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 70%;
+    font-size: 60px;
+}
+
+.scroll:hover {
+    color: #027BFF;
+    background: none;
+}
+
+.name {
+    animation: type 3s steps(13);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    width: 13ch;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
+/*-------- Skills --------*/
+.skills {
+    text-align: center;
+    margin-bottom: 15em;
+}
+
+.skills p{
+    margin-bottom: 30px;
+}
+
+.skills img {
+    width: 60px;
+    margin: 0 15px;
+}
+
+
+
+/*-------- Work 01 --------*/
+.work {
+    width: 100%;
+    position: relative;
+    margin-top: 15em;
+}
+
+.work > .workText{
+    position: absolute;
+    top: 85;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.work > .workText > .underline {
+    display: block;
+    background-color: #027BFF;
+    height: 3px;
+    width: 61px;
+    margin-top: 5px;
+}
+
+.work > .workImg {
+    width: 60%;
+    float: right;
+    -webkit-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+    -moz-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+    box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+}
+
+/*-------- Work 02 --------*/
+.work2 {
+    width: 100%;
+    position: relative;
+    margin-top: 15em;
+}
+
+.work2 > .workText{
+    position: absolute;
+    top: 85;
+    right: 0;
+    text-align: right;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.work2 > .workText > .underline {
+    display: block;
+    background-color: #027BFF;
+    height: 3px;
+    width: 61px;
+    margin-top: 5px;
+    float: right;
+}
+
+.work2 > .workImg {
+    width: 60%;
+    float: left;
+    -webkit-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+    -moz-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+    box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+}
+
+
+
+/*-------- Work 01 and 02 --------*/
+.work a, .work2 a {
+    text-decoration: none;
+    color: #17191A;
+}
+
+.utube {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+/*-------- Collapsible --------*/
+.collapsible {
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    margin-top: 1em;
+    background: none;
+}
+
+.active, .collapsible:hover {
+    color: #027BFF;
+    background: none;
+}
+
+.content {
+    padding: 30px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+#resume {
+    margin-top: 0px;
+    padding: 1em;
+    font-size: 14px;
+    animation: pulse 1.75s;
+}
+
+
+/*-------- Footer --------*/
+footer {
+    text-align: left;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    margin-left: 2em;
+}
+
+footer > .underline {
+    display: block;
+    background-color: #027BFF;
+    height: 3px;
+    width: 61px;
+    margin-top: 5px;
+}
+
+footer > h5 {
+    font-size: 12px;
+}
+
+
+
+
+/*-------- Gallery --------*/
+
+
+.gallery-box{
+    margin: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flexbox-wrap: wrap;
+    -ms-flexbox-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+}
+
+.gallery-box div {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+}
+
+.gallery-box div img{
+    width: 100%;
+    height: auto;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width:700px) {
+    body {
+        width: 90%
+    }
+    
+    .talents {
+        display: none;
+    }
+    
+    .responsive {
+        width: 49.9999%;
+        margin: 0 6px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .responsive {
+        width: 100%;
+    }
+}
